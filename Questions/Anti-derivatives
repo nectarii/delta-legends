@@ -1,0 +1,21 @@
+Anti Derivatives:
+easy
+0 = c
+a (constant) = ax+c
+x^a = (x^(a+1)/(a+1))+c
+e^x = e^x+c
+a^xln(a) =a^x+c
+1/x = ln|x|+c
+hard
+sin(x) = -cos(x)+c
+cos(x) = sin(x)+c
+sec^2(x) = tan(x)+c
+sec(x)tan(x) = sec(x)+c
+-csc(x)cot(x) = csc(x)+c
+-csc^2(x) = cot(x)+c
+1/sqrt(1-x^2) = arcsin(x)+c
+-1/sqrt(1-x^2) = arccos(x)+c
+1/(1+x^2) = arctan(x)+c
+1/(x*sqrt(x^2-1)) = arcsec(x)+c
+-1/(x*sqrt(x^2-1)) = arccsc(x)+c
+1/(1+x^2) = arccot(x)+c
