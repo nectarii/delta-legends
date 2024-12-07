@@ -34,7 +34,7 @@
       },
       "outputs": [],
       "source": [
-        import random
+       import random
 
 question = ['Derivative of a (constant)','Derivative of ax','Derivative of x^a',
             'Derivative of kx^a','Derivative of e^x','Derivative of a^x','e^f(x)',
@@ -45,9 +45,11 @@ answers = ['0','a','ax^(a-1)','akx^(a-1)','e^x','ln(a)*a^x',"e^f(x)*f'(x)",'1/x'
            '-csc^2(x)','1/sqrt(1-x^2)','-1/sqrt(1-x^2)','1/(1+x^2)']
 lose=0
 score=0
-
-while lose == 0:
-  questionNumber = random.randint(0,len(question)-1)
+usedQuestions = []
+while lose == 0 and len(usedQuestions) < len(question):
+  while questionNumber in usedQuestions:
+    questionNumber = random.randint(0,len(question)-1)
+  usedQuestions.append(questionNumber)
   print("---------------")
   print(question[questionNumber])
   print()
