@@ -17,6 +17,8 @@ class Player(pygame.sprite.Sprite):
         self.mask = None
         self.direction = "left"
         self.animation_count = 0
+        self.hit = False 
+        self.hit_count = 0
     
     def move(self, dx, dy):
         self.rect.x += dx 
@@ -36,7 +38,18 @@ class Player(pygame.sprite.Sprite):
             self.animation_count = 0
 
     def loop(self, fps):
+        self.y_vel += min(1, (self.fall_count / fps) * self.GRAVITY)
         self.move(self.x_vel, self.y_vel)
+
+        if self.hit:
+            self.hit_count += 1
+        if self.hit_count > fps * 2:
+            self.hit = False
+            self.hit_count = 0
+
+        self.fall_count += 1
+        self.update_sprite()
+
     
 
 def main(window):
@@ -52,7 +65,6 @@ def main(window):
         screen.fill((135, 206, 235))
 
         # RENDER YOUR GAME HERE
-        draw_text("Press SPACE to pause", font, TEXT_COL, 640, 360)    
 
         # flip() the display to put your work on screen
         pygame.display.flip()
