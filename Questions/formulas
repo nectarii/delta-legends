@@ -1,0 +1,13 @@
+Derivatives:
+a (constant) = 0
+ax = a
+x^a = ax^(a-1)
+kx^a = akx^(a-1)
+e^x = e^x
+a^x =a ^x*ln(a)
+e^f(x) = f'(x)*e^f(x)
+ln(x) = 1/x
+sin(x) = cos(x)
+cos(x) = -sin(x)
+tan(x) = sec^2(x)
+sec = sec(x)tan(x)
