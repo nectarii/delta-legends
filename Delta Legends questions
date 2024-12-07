@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPb70ZMbqyiSolLpNHxAc6Y",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nectarii/delta-legends/blob/main/Delta_Legends_questions.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6WQbHxzYyjoZ"
+      },
+      "outputs": [],
+      "source": [
+        import random
+
+question = ['Derivative of a (constant)','Derivative of ax','Derivative of x^a',
+            'Derivative of kx^a','Derivative of e^x','Derivative of a^x']
+answers = ['0','a','ax^(a-1)','akx^(a-1)','e^x','ln(a)*a^x']
+lose=0
+score=0
+
+while lose == 0:
+  questionNumber = random.randint(0,len(question)-1)
+  print("---------------")
+  print(question[questionNumber])
+  print()
+  dontChoose = [questionNumber]
+  correct = answers[questionNumber]
+  answers.remove(correct)
+  answerNumber = random.randrange(4)
+  for i in range(answerNumber):
+    wrongAnswer = 0
+    while  wrongAnswer in dontChoose:
+      wrongAnswer=random.randrange(len(question)-1)
+    print(str(i+1)+". "+answers[wrongAnswer])
+    dontChoose.append(wrongAnswer)
+  print(str(answerNumber+1)+". "+correct)
+  for i in range(3-answerNumber):
+    wrongAnswer = 0
+    while  wrongAnswer in dontChoose:
+      wrongAnswer=random.randrange(len(question)-1)
+    print(str(i+answerNumber+2)+". "+answers[wrongAnswer])
+    dontChoose.append(wrongAnswer)
+  answers.insert(questionNumber,correct)
+  right=answerNumber+1
+  if int(input("Answer number:")) == right :
+    print("correct")
+    score=score+1
+  else:
+    lose=1
+    print("wrong. Your score is "+ str(score))
+      ]
+    }
+  ]
+}
