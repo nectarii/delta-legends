@@ -1,0 +1,59 @@
+If f(x) is continuous:
+lim of x as x approaches c of f(x) = f(c)
+if f(x) = p(x)/q(x) and p(x) and q(x) = 0 or p(x) and q(x) = infnity:
+lim of x as x approaches c of f(x) = p'(x)/q'(x)
+
+Intermediate value theorum
+if f(x) is continuous on [a,b] and f(b)>f(a)
+for any a<=c<=b f(x)=c exists on [a,b]
+
+Average rate of change: ((f(b)-f(a))/(b-a))
+difference quotient: lim as h approaches 0 of (f(x+h)-f(x))/h = lim as x approaches c of((f(x)-f(c))/(x-c)) = f'(x)
+tangent line at (a,f(a)): y = f'(a)(x-a)+f(a)
+normal line at (a,f(a)): y = -(x-a)/f'(a)
+
+Mean value theorum
+if f(x) is continuous on [a,b]
+there is a vaule c between a and b, so that f'(c)=((f(b)-f(a))/(b-a))
+
+x(t) = position
+v(t)= x'(t) = velocity
+a(t) = v'(t) = acceleration
+
+critical values are where f'(c)=0
+if f'(x) changes from positive to negative at c then c is a relative max
+if f'(x) changes from positive to negative at c then c is a relative min
+
+if f''(c)>0 then f(x) is concave up at c
+if f''(c)<0 then f(x) is concave down at c
+
+derivative of inverse
+if g(x) is the inverse of f(x), then g'(x) = 1/f'(f^-1(x))
+
+Integrals
+if F'(x) = f(x)
+then int from a to b of f(x) = F(b)-F(a)
+int from a to a of f(x) = 0
+int from a to b of f(x) + int from b to c of f(x) = int from a to c of f(x)
+int from a to b of f(x) = - int from b to a of f(x) = 
+int from -a to a of f(x) = 2(int from a to b of f(x)) when f(x) is an odd function
+int from -a to a of f(x) = 0 when f(x) is an even function
+
+Rieman sums
+if [a,b] is divided into n segments, the width of each segemnt = dx = (b-a)/n
+right rieman sum = (dx)(f(x₀)+f(x₁)+...f(xₙ₋₁))
+left rieman sum = (dx)(f(x₀)+f(x₂)+...f(xₙ))
+midpoint rieman sum = (dx)(f(x₁/₂)+f(x₃/₂)+...f(x₍₂ₙ₋₁₎/₂))
+trapezoidal rieman sum = (1/2)(dx)(f(x₀)+2f(x₁)+2f(x₂)+...f(xₙ))
+
+int from a to b of f(x) = lim as n approaches infinity of the sum of n intervals with width i=1 of f(cᵢ)dx
+
+average value of a function
+(1/(b-a))(int from a to b of f(x))
+the derivative of int from a to x of f(t) = f(x)
+the derivative of int from x to b of f(t) = -f(x)
+the derivative of int from a to g(x) of f(t) = f(g(x))*g'(x)
+
+Integration by parts
+
+int of u dv = uv - int of v du
